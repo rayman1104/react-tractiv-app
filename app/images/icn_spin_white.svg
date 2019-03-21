@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+  <defs>
+    <style>
+      .b{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-width:1.48px}
+    </style>
+  </defs>
+  <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5" d="M1 13.7L14.3 1l12.6 13.2L13.7 27z"/>
+  <path d="M9.1 13.5l2-2h6l2 2M14.2 11.8v5" class="b"/>
+</svg>

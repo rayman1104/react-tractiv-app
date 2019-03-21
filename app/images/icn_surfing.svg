@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="37.8" height="37.8">
+  <defs>
+    <style>
+      .a{fill:none;stroke:#d97d54;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-width:2px}
+    </style>
+  </defs>
+  <path d="M1.4 18.5l18-17.1 17 18-17.9 17z" class="a"/>
+  <path d="M2.4 17.8a15.4 15.4 0 0 0 10-1.7c2.7-1.6 5-4.6 10.7-3.3a5.2 5.2 0 0 0-2.5 2.2c-1 2.1 2.2 3 4.4 3.2a78.6 78.6 0 0 0 9.7-.2" class="a"/>
+</svg>

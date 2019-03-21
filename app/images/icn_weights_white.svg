@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="37.8" height="37.8">
+  <defs>
+    <style>
+      .a{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-width:2px}
+    </style>
+  </defs>
+  <path d="M1.4 18.5l18-17.1 17 18-17.9 17zM13.4 15.9v6M24.4 15.9v6M12.4 18.8h13" class="a"/>
+</svg>
