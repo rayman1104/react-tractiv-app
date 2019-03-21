@@ -101,11 +101,10 @@ export class SchedulePage extends React.PureComponent {
             return startDay.add(offset, 'minutes');
           },
         );
-        console.log('==', getDaySlots(duration, schedule[weekday]));
         Array.prototype.push.apply(slots, daySlots);
       }
     }
-    console.log(slots.map(slot => slot.format('dddd, MMMM Do h:mma')));
+    // console.log(slots.map(slot => slot.format('dddd, MMMM Do h:mma')));
     this.setState({
       slots: slots.map(slot => ({
         name: slot.format('dddd, MMMM Do h:mma'),
@@ -208,7 +207,11 @@ export class SchedulePage extends React.PureComponent {
                 onChange={this.onDateChange}
               >
                 {slots.map(slot => (
-                  <option key={slot.value} value={slot.value}>
+                  <option
+                    className="app_input_date_option"
+                    key={slot.value}
+                    value={slot.value}
+                  >
                     {slot.name}
                   </option>
                 ))}

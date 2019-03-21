@@ -353,11 +353,16 @@ body.fontLoaded {
 
 .app_input_icon_pretender {
   color: #00000000;
+  // font-size: 0;
   align-content: center;
   justify-content: center;
   border: none;
   -webkit-appearance: none;
   background: #D97D54 url('../images/icn_search_light.svg') no-repeat center;
+}
+
+.app_input_date_option {
+  color: #212529;
 }
 
 .app_input_ghost_wrapper {
