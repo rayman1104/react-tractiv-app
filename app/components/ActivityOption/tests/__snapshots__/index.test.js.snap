@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ActivityOption /> Should render correctly 1`] = `
+<div
+  className="app_main_day_activity app_main_overlay_activity_active"
+  onClick={[Function]}
+>
+  <div
+    className="app_grid_day_action"
+  >
+    <img
+      alt="SPINNING"
+      className="app_grid_day_action_icon"
+      src="IMAGE_MOCK"
+    />
+  </div>
+  <span
+    className="app_grid_overlay_text"
+  >
+    SPINNING
+  </span>
+</div>
+`;

@@ -30,12 +30,13 @@ import SpinImage2x from 'images/4_spin@2x.png';
 import SpinPicture from 'images/spinning.png';
 import SpinPicture2x from 'images/spinning@2x.png';
 
+import SlotsList from 'components/SlotsList';
+
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
 import { makeSelectActivitySlots } from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-import SlotsList from '../../components/SlotsList';
 
 /* eslint-disable react/prefer-stateless-function */
 export class MainPage extends React.PureComponent {

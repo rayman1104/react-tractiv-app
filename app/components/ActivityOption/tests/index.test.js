@@ -1,11 +1,22 @@
-// import React from 'react';
-// import { mount } from 'enzyme';
-// import { enzymeFind } from 'styled-components/test-utils';
+import React from 'react';
+import { shallow } from 'enzyme';
+import { shallowToJson } from 'enzyme-to-json';
 
-// import ActivityOption from '../index';
+import SpinIcon from 'images/icn_spin.svg';
+import SpinIconActive from 'images/icn_spin_white.svg';
+import ActivityOption from '../index';
 
 describe('<ActivityOption />', () => {
-  it('Expect to have unit tests specified', () => {
-    expect(true).toEqual(false);
+  it('Should render correctly', () => {
+    const output = shallow(
+      <ActivityOption
+        img={SpinIcon}
+        activeImg={SpinIconActive}
+        text="SPINNING"
+        selected
+        onSelect={() => {}}
+      />,
+    );
+    expect(shallowToJson(output)).toMatchSnapshot();
   });
 });

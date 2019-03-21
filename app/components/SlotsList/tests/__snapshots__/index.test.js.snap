@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SlotsList /> Should render correctly 1`] = `
+<section
+  className="app_main_day"
+  key="2019-03-20"
+>
+  <h2
+    className="app_main_day_date"
+  >
+    March 20
+  </h2>
+  <h2
+    className="app_main_day_weekday"
+  >
+    Wednesday
+  </h2>
+  <div
+    className="app_main_day_roll_wrap"
+  >
+    <div
+      className="app_main_day_roll"
+    >
+      <div
+        className="app_main_day_activity"
+        key="2019-03-20T11:00SURFING"
+      >
+        <div
+          className="app_grid_day_action"
+        >
+          <img
+            alt="SURFING"
+            className="app_grid_day_action_icon"
+            src="IMAGE_MOCK"
+            srcSet="IMAGE_MOCK 2x"
+          />
+        </div>
+        <span
+          className="app_grid_day_time"
+        >
+          11:00AM
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+`;

@@ -41,13 +41,16 @@ class SlotsList extends React.PureComponent {
       );
     }
     return dates.map(date => (
-      <section className="app_main_day">
+      <section key={date} className="app_main_day">
         <h2 className="app_main_day_date">{moment(date).format('MMMM D')}</h2>
         <h2 className="app_main_day_weekday">{moment(date).format('dddd')}</h2>
         <div className="app_main_day_roll_wrap">
           <div className="app_main_day_roll">
             {slots[date].sort(byField('date')).map(slot => (
-              <div className="app_main_day_activity">
+              <div
+                key={slot.date + slot.activity}
+                className="app_main_day_activity"
+              >
                 <div className="app_grid_day_action">
                   <img
                     src={activityImages[slot.activity][0]}
@@ -67,7 +70,17 @@ class SlotsList extends React.PureComponent {
 }
 
 SlotsList.propTypes = {
-  slots: PropTypes.object,
+  slots: PropTypes.objectOf(
+    PropTypes.arrayOf(
+      PropTypes.shape({
+        activity: PropTypes.oneOf(['SURFING', 'HIKING', 'WEIGHTS', 'SPINNING'])
+          .required,
+        time: PropTypes.string.required,
+        date: PropTypes.string.required,
+        duration: PropTypes.number,
+      }),
+    ),
+  ),
 };
 
 export default SlotsList;

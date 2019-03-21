@@ -70,7 +70,7 @@ export class SchedulePage extends React.PureComponent {
 
   onSubmit = () => {
     const { activity, duration, date } = this.state;
-    this.props.addSlot(activity, date, duration);
+    this.props.addSlot(activity, date, +duration);
     console.log({ activity, duration, date });
     this.props.push('/');
   };
