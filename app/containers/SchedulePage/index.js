@@ -54,24 +54,14 @@ export class SchedulePage extends React.PureComponent {
     activity: null,
     duration: '15',
     date: undefined,
-    slots: [],
   };
 
   componentDidMount() {
     this.props.onMount();
   }
 
-  componentDidUpdate(prevProps) {
-    if (
-      Object.keys(this.props.schedule).length !==
-      Object.keys(prevProps.schedule).length
-    ) {
-      this.findFreeSlots();
-    }
-  }
-
   onDurationChange = event => {
-    this.setState({ duration: event.target.value }, this.findFreeSlots);
+    this.setState({ duration: event.target.value });
   };
 
   onDateChange = event => {
@@ -85,10 +75,11 @@ export class SchedulePage extends React.PureComponent {
     this.props.push('/');
   };
 
-  findFreeSlots = () => {
-    const { schedule } = this.props;
-    const { duration } = this.state;
-    const slots = [];
+  findFreeSlots = (schedule, duration) => {
+    if (!schedule) {
+      return [];
+    }
+    const freeSlots = [];
     for (let i = 1; i < 8; i += 1) {
       const dayStart = moment()
         .startOf('day')
@@ -101,21 +92,21 @@ export class SchedulePage extends React.PureComponent {
             return startDay.add(offset, 'minutes');
           },
         );
-        Array.prototype.push.apply(slots, daySlots);
+        Array.prototype.push.apply(freeSlots, daySlots);
       }
     }
+    const slots = freeSlots.map(slot => ({
+      name: slot.format('dddd, MMMM Do h:mma'),
+      value: slot.format('YYYY-MM-DDTHH:mm'),
+    }));
     // console.log(slots.map(slot => slot.format('dddd, MMMM Do h:mma')));
-    this.setState({
-      slots: slots.map(slot => ({
-        name: slot.format('dddd, MMMM Do h:mma'),
-        value: slot.format('YYYY-MM-DDTHH:mm'),
-      })),
-    });
-    // return slots;
+    // this.setState({ slots });
+    return slots;
   };
 
   render() {
-    const { activity, duration, date, slots } = this.state;
+    const { schedule } = this.props;
+    const { activity, duration, date } = this.state;
     return (
       <div className="page app_overlay">
         <button
@@ -206,7 +197,7 @@ export class SchedulePage extends React.PureComponent {
                 className="app_input_icon_pretender"
                 onChange={this.onDateChange}
               >
-                {slots.map(slot => (
+                {this.findFreeSlots(schedule, duration).map(slot => (
                   <option
                     className="app_input_date_option"
                     key={slot.value}
