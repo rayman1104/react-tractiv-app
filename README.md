@@ -29,7 +29,7 @@ yarn && yarn start
 yarn test
 ```
 
-The `db.json` file is located in `server` directory.
+The `db.json` file is located in `server` directory. You can use it to edit hardcoded data.
 
 The app is also deployed to Heroku, so you can <a href="https://react-tractiv-app.herokuapp.com/">visit it</a> without deployment. 
 

@@ -1,18 +1,5 @@
 {
-  "activities": [
-    {
-      "activity": "SURFING",
-      "date": "2019-03-29T11:00",
-      "duration": 90,
-      "id": 1
-    },
-    {
-      "activity": "WEIGHTS",
-      "date": "2019-03-27T13:00",
-      "duration": 90,
-      "id": 2
-    }
-  ],
+  "activities": [],
   "schedule": {
     "Monday": [
       {

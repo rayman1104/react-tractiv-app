@@ -1,47 +1,92 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SlotsList /> Should render correctly 1`] = `
-<section
-  className="app_main_day"
-  key="2019-03-20"
->
-  <h2
-    className="app_main_day_date"
+Array [
+  <section
+    className="app_main_day"
+    key="2019-03-27"
   >
-    March 20
-  </h2>
-  <h2
-    className="app_main_day_weekday"
-  >
-    Wednesday
-  </h2>
-  <div
-    className="app_main_day_roll_wrap"
-  >
+    <h2
+      className="app_main_day_date"
+    >
+      March 27
+    </h2>
+    <h2
+      className="app_main_day_weekday"
+    >
+      Wednesday
+    </h2>
     <div
-      className="app_main_day_roll"
+      className="app_main_day_roll_wrap"
     >
       <div
-        className="app_main_day_activity"
-        key="2019-03-20T11:00SURFING"
+        className="app_main_day_roll"
       >
         <div
-          className="app_grid_day_action"
+          className="app_main_day_activity"
+          key="2019-03-27T13:00WEIGHTS"
         >
-          <img
-            alt="SURFING"
-            className="app_grid_day_action_icon"
-            src="IMAGE_MOCK"
-            srcSet="IMAGE_MOCK 2x"
-          />
+          <div
+            className="app_grid_day_action"
+          >
+            <img
+              alt="WEIGHTS"
+              className="app_grid_day_action_icon"
+              src="IMAGE_MOCK"
+              srcSet="IMAGE_MOCK 2x"
+            />
+          </div>
+          <span
+            className="app_grid_day_time"
+          >
+            1:00PM
+          </span>
         </div>
-        <span
-          className="app_grid_day_time"
-        >
-          11:00AM
-        </span>
       </div>
     </div>
-  </div>
-</section>
+  </section>,
+  <section
+    className="app_main_day"
+    key="2019-03-29"
+  >
+    <h2
+      className="app_main_day_date"
+    >
+      March 29
+    </h2>
+    <h2
+      className="app_main_day_weekday"
+    >
+      Friday
+    </h2>
+    <div
+      className="app_main_day_roll_wrap"
+    >
+      <div
+        className="app_main_day_roll"
+      >
+        <div
+          className="app_main_day_activity"
+          key="2019-03-29T11:00SURFING"
+        >
+          <div
+            className="app_grid_day_action"
+          >
+            <img
+              alt="SURFING"
+              className="app_grid_day_action_icon"
+              src="IMAGE_MOCK"
+              srcSet="IMAGE_MOCK 2x"
+            />
+          </div>
+          <span
+            className="app_grid_day_time"
+          >
+            11:00AM
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>,
+]
 `;

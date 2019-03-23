@@ -6,16 +6,18 @@ import SlotsList from '../index';
 
 describe('<SlotsList />', () => {
   it('Should render correctly', () => {
-    const mockSlots = {
-      '2019-03-20': [
-        {
-          activity: 'SURFING',
-          time: '11:00AM',
-          date: '2019-03-20T11:00',
-          duration: 90,
-        },
-      ],
-    };
+    const mockSlots = [
+      {
+        activity: 'SURFING',
+        date: '2019-03-29T11:00',
+        duration: 90,
+      },
+      {
+        activity: 'WEIGHTS',
+        date: '2019-03-27T13:00',
+        duration: 90,
+      },
+    ];
     const output = shallow(<SlotsList slots={mockSlots} />);
     expect(shallowToJson(output)).toMatchSnapshot();
   });
