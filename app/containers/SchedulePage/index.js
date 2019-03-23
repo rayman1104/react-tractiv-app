@@ -30,7 +30,7 @@ import ActivityOption from 'components/ActivityOption';
 
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
-import { addActivitySlot, loadSchedule } from '../MainPage/actions';
+import { addActivity, loadSchedule } from '../MainPage/actions';
 import reducer from '../MainPage/reducer';
 import saga from '../MainPage/saga';
 import { makeSelectSchedule } from '../MainPage/selectors';
@@ -95,13 +95,10 @@ export class SchedulePage extends React.PureComponent {
         Array.prototype.push.apply(freeSlots, daySlots);
       }
     }
-    const slots = freeSlots.map(slot => ({
+    return freeSlots.map(slot => ({
       name: slot.format('dddd, MMMM Do h:mma'),
       value: slot.format('YYYY-MM-DDTHH:mm'),
     }));
-    // console.log(slots.map(slot => slot.format('dddd, MMMM Do h:mma')));
-    // this.setState({ slots });
-    return slots;
   };
 
   render() {
@@ -230,7 +227,7 @@ const mapStateToProps = createStructuredSelector({
 
 const mapDispatchToProps = {
   onMount: loadSchedule,
-  addSlot: addActivitySlot,
+  addSlot: addActivity,
   push,
 };
 

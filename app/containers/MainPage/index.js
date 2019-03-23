@@ -37,9 +37,14 @@ import injectReducer from 'utils/injectReducer';
 import { makeSelectActivitySlots } from './selectors';
 import reducer from './reducer';
 import saga from './saga';
+import { loadActivities } from './actions';
 
 /* eslint-disable react/prefer-stateless-function */
 export class MainPage extends React.PureComponent {
+  componentDidMount() {
+    this.props.onMount();
+  }
+
   render() {
     return (
       <div className="app page">
@@ -157,6 +162,7 @@ const mapStateToProps = createStructuredSelector({
 });
 
 const mapDispatchToProps = {
+  onMount: loadActivities,
   push,
 };
 
