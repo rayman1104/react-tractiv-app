@@ -1,6 +1,5 @@
 ## React tractiv app
 
-The task for Nixa.io React challenge.<br />
 The Tractiv app allows a user to track and schedule their activities.
 
 The assignment is to create a simple React application based on the Tractive UI Kit.
